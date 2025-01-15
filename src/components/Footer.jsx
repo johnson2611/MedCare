@@ -2,7 +2,12 @@
 import { Footer, FooterCopyright } from "flowbite-react";
 import React from "react";
 import { Link } from "react-router-dom";
-import {BsDribbble, BsFacebook, BsInstagram, BsTwitterX} from 'react-icons/bs';
+import {
+  BsDribbble,
+  BsFacebook,
+  BsInstagram,
+  BsTwitterX,
+} from "react-icons/bs";
 
 function FooterCom() {
   return (
@@ -21,32 +26,56 @@ function FooterCom() {
           </div>
           <div className="grid grid-cols-2 gap-8 mt-4 sm:grid-cols-3 sm:gap-6">
             <div>
-              <Footer.Title title="About" />
+              <Footer.Title title="Links" className="text-black" />
               <Footer.LinkGroup col>
                 <Footer.Link
-                  href="https:AJ.com"
-                  target="_blank"
+                  href="/about"
+                  className="hover:text-blue-900 pt-2"
+                  target=""
                   rel="noopener noreferrer"
                 >
-                  Ajay
+                  About
                 </Footer.Link>
                 <Footer.Link
-                  href="/about"
-                  target="_blank"
+                  href="/service"
+                  className="hover:text-blue-900 pt-2"
+                  target=""
                   rel="noopener noreferrer"
                 >
-                  Ajay
+                  Service
+                </Footer.Link>
+                <Footer.Link
+                  href="/doctor"
+                  className="hover:text-blue-900 pt-2"
+                  target=""
+                  rel="noopener noreferrer"
+                >
+                  Doctor
+                </Footer.Link>
+                <Footer.Link
+                  href="/news"
+                  className="hover:text-blue-900 pt-2"
+                  target=""
+                  rel="noopener noreferrer"
+                >
+                  News
                 </Footer.Link>
               </Footer.LinkGroup>
             </div>
             <div>
-              <Footer.Title title="Follow us" />
+              <Footer.Title title="Follow us" className="text-black" />
               <Footer.LinkGroup col>
-                <Footer.Link href="#" target="_blank" rel="noopener noreferrer">
+                <Footer.Link
+                  href="#"
+                  className="hover:text-blue-900 pt-2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Github
                 </Footer.Link>
                 <Footer.Link
-                  href="#t"
+                  href="#"
+                  className="hover:text-blue-900 pt-2"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -55,13 +84,19 @@ function FooterCom() {
               </Footer.LinkGroup>
             </div>
             <div>
-              <Footer.Title title="Legal" />
+              <Footer.Title title="Legal" className="text-black" />
               <Footer.LinkGroup col>
-                <Footer.Link href="#" target="_blank" rel="noopener noreferrer">
+                <Footer.Link
+                  href="#"
+                  className="hover:text-blue-900 pt-2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Privacy Policy
                 </Footer.Link>
                 <Footer.Link
-                  href="/about"
+                  href="#"
+                  className="hover:text-blue-900 pt-2"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -73,12 +108,33 @@ function FooterCom() {
         </div>
         <Footer.Divider />
         <div className="w-full sm:flex sm:items-center sm:justify-between py-12">
-          <FooterCopyright href="#" by="MedCare" year={new Date().getFullYear()} className="m-auto text-center text-black font-bold text-medium" />
+          <FooterCopyright
+            href="#"
+            by="MedCare"
+            year={new Date().getFullYear()}
+            className="m-auto text-center text-black font-bold text-medium"
+          />
           <div className="flex gap-6 sm:mt-0 mt-4 sm:justify-center">
-            <Footer.Icon href="#" icon={BsFacebook}/>
-            <Footer.Icon href="#" icon={BsInstagram}/>
-            <Footer.Icon href="#" icon={BsTwitterX}/>
-            <Footer.Icon href="#" icon={BsDribbble}/>
+            <Footer.Icon
+              href="#"
+              icon={BsFacebook}
+              className="hover:text-blue-900"
+            />
+            <Footer.Icon
+              href="#"
+              icon={BsInstagram}
+              className="hover:text-blue-900"
+            />
+            <Footer.Icon
+              href="#"
+              icon={BsTwitterX}
+              className="hover:text-blue-900"
+            />
+            <Footer.Icon
+              href="#"
+              icon={BsDribbble}
+              className="hover:text-blue-900"
+            />
           </div>
         </div>
       </div>
@@ -87,4 +143,3 @@ function FooterCom() {
 }
 
 export default FooterCom;
-

@@ -1,0 +1,139 @@
+[
+    {
+      "id": 1,
+      "name": "Dr. Nuel",
+      "specialization": "Cardiologist",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit adipisicing elit.",
+      "image": "/assets/nuel.png",
+      "contact": {
+        "email": "nuel@gmail.com",
+        "phone": "+123456789"
+      },
+      "availability": ["Monday", "Wednesday", "Friday"],
+      "social": {
+        "linkedin": "#",
+        "instagram": "#",
+        "facebook": "#"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Dr. Lopez",
+      "specialization": "Cardiologist",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit adipisicing elit.",
+      "image": "/assets/nuel.png",
+      "contact": {
+        "email": "lopez@gmail.com",
+        "phone": "+123456789"
+      },
+      "availability": ["Monday", "Wednesday", "Thursday"],
+      "social": {
+        "linkedin": "#",
+        "instagram": "#",
+        "facebook": "#"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Dr. Shola",
+      "specialization": "Cardiologist",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit adipisicing elit.",
+      "image": "/assets/nuel.png",
+      "contact": {
+        "email": "shola@gmail.com",
+        "phone": "+123456789"
+      },
+      "availability": ["Monday", "Tuesday", "Saturday"],
+      "social": {
+        "linkedin": "#",
+        "instagram": "#",
+        "facebook": "#"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Dr. Sharon",
+      "specialization": "Cardiologist",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit adipisicing elit.",
+      "image": "/assets/nuel.png",
+      "contact": {
+        "email": "nuel@gmail.com",
+        "phone": "+123456789"
+      },
+      "availability": ["Monday", "Wednesday", "Friday"],
+      "social": {
+        "linkedin": "#",
+        "instagram": "#",
+        "facebook": "#"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Dr. Johnson",
+      "specialization": "Radiology",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit adipisicing elit.",
+      "image": "/assets/nuel.png",
+      "contact": {
+        "email": "johnson@gmail.com",
+        "phone": "+123456789"
+      },
+      "availability": ["Tuesday", "Wednesday", "Friday"],
+      "social": {
+        "linkedin": "#",
+        "instagram": "#",
+        "facebook": "#"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Dr. Joy",
+      "specialization": "Dental",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit adipisicing elit.",
+      "image": "/assets/nuel.png",
+      "contact": {
+        "email": "nuel@gmail.com",
+        "phone": "+123456789"
+      },
+      "availability": ["Monday", "Thursday", "Friday"],
+      "social": {
+        "linkedin": "#",
+        "instagram": "#",
+        "facebook": "#"
+      }
+    },
+    {
+      "id": 7,
+      "name": "Dr. Smith",
+      "specialization": "Dental",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit adipisicing elit.",
+      "image": "/assets/nuel.png",
+      "contact": {
+        "email": "smith@gmail.com",
+        "phone": "+1263456789"
+      },
+      "availability": ["Monday", "Tuesday", "Friday"],
+      "social": {
+        "linkedin": "#",
+        "instagram": "#",
+        "facebook": "#"
+      }
+    },
+    {
+      "id": 7,
+      "name": "Dr. Ope",
+      "specialization": "Dental",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit adipisicing elit.",
+      "image": "/assets/nuel.png",
+      "contact": {
+        "email": "smith@gmail.com",
+        "phone": "+1263456789"
+      },
+      "availability": ["Monday", "Tuesday", "Friday"],
+      "social": {
+        "linkedin": "#",
+        "instagram": "#",
+        "facebook": "#"
+      }
+    }
+  ]
+  

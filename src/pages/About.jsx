@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-import banner from "../assets/banner.png";
+import team from "../assets/team.jpg";
 import Calendar from "../assets/Calendar.svg";
 import Team from "../assets/Team.svg";
 import Cash from "../assets/Cash.svg";
@@ -13,9 +13,9 @@ function About() {
       {/* Banner Section */}
       <div className="relative w-full h-[80vh] md:h-[60vh] lg:h-[70vh] bg-cover bg-center">
         <img
-          src={banner}
+          src={team}
           alt="banner"
-          className="w-full h-full md:h-max object-cover"
+          className="w-full h-full md:h-90 object-cover"
         />
         <div className="absolute top-0 left-0 w-full h-full  flex flex-col justify-center items-start pl-6 md:pl-16 lg:pl-24 text-left">
           <h2 className="text-[#558aad] mt-24 text-lg md:text-2xl lg:text-3xl font-sans font-medium">
@@ -76,10 +76,10 @@ function About() {
 
         {/* Right Section: Text */}
         <div className="md:w-1/2 w-full flex flex-col md:justify-start md:items-start justify-center items-center">
-          <h2 className="text-gray-700 text-left mt-8 text-xl font-bold">
+          <h2 className="text-gray-700 text-left mt-0 text-xl font-bold">
             Welcome MedCare
           </h2>
-          <p className="text-gray-700 text-left mt-4 text-xl font-bold">
+          <p className="text-gray-700 text-left mt-2 mb-4 text-xl font-bold">
             Best Care for Your Good Health
           </p>
           <div className="hidden md:flex space-x-10 items-center pb-4">
@@ -118,17 +118,23 @@ function About() {
             </div>
           </div>
 
-          <p className="text-gray-700 md:text-left text-center max-w-md mt-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-            placerat scelerisque tortor ornare ornare. Convallis felis vitae
-            tortor augue. Velit nascetur proin massa in. Consequat faucibus
-            porttitor enim et.
+          <p className="text-black md:text-left text-center max-w-md mt-2 mb-5">
+            Welcome to MedCare Welcome to MedCare, your trusted partner in
+            healthcare. We are dedicated to offering a wide range of medical
+            services designed to meet your needs. Whether you are seeking expert
+            advice, advanced treatments, or preventive care, our team of
+            professionals is here to provide the best possible care. At MedCare,
+            we focus on delivering personalized healthcare that is accessible,
+            efficient, and compassionate. Our commitment to quality ensures that
+            you receive the care you deserve. Explore our services, learn more
+            about our team, and take the first step toward better health with
+            MedCare today!
           </p>
         </div>
       </div>
 
       {/* footer */}
-      <FooterCom/>
+      <FooterCom />
     </div>
   );
 }

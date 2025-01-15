@@ -4,7 +4,7 @@ import banner from "../assets/banner.png";
 import Calendar from "../assets/Calendar.svg";
 import Team from "../assets/Team.svg";
 import Cash from "../assets/Cash.svg";
-import Hm from "../assets/Hm.png";
+import dental from "../assets/dental.jpg";
 import nuel from "../assets/nuel.png";
 import doctors from "../assets/doctors.jpg";
 
@@ -113,7 +113,7 @@ function News() {
             <input
               type="search"
               placeholder="enter anything...."
-              className="w-full px-3 py-2 rounded-lg text-white placeholder-gray-500 placeholder-opacity-70 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 rounded-lg text-black placeholder-gray-500 placeholder-opacity-70 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
 
@@ -150,7 +150,72 @@ function News() {
           {/* Image Section */}
           <div className="w-full flex justify-center">
             <img
-              src={doctors}
+              src={dental}
+              alt="Doctor"
+              className="w-full h-auto object-cover max-w-md"
+            />
+          </div>
+
+          {/* Write-up Section */}
+          <div className="text-center md:text-center mt-6">
+            <h2 className="font-semibold">05, October, 2024</h2>
+            <div className="flex justify-center md:justify-center space-x-4 mt-2">
+              <span className="flex items-center">
+                <FaEye className="text-red-600 mr-2" />
+                <h2 className="text-sm">66</h2>
+              </span>
+              <span className="flex items-center">
+                <FaHeart className="text-red-600 mr-2" />
+                <h2 className="text-sm">66</h2>
+              </span>
+            </div>
+            <p className="mt-4 text-sm">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+              suscipit quod quam eligendi iusto. Consectetur magni tempora illo
+              et earum. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Quaerat suscipit quod quam eligendi iusto. Consectetur magni
+              tempora illo et earum. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Quaerat suscipit quod quam eligendi iusto.
+              Consectetur magni tempora illo et earum. Lorem ipsum dolor sit
+              amet consectetur adipisicing elit. Quaerat suscipit quod quam
+              eligendi iusto. Consectetur magni tempora illo et earum
+            </p>
+          </div>
+        </div>
+
+        {/* Right Section: Recent Posts */}
+        <div className="md:w-full w-full mt-2 flex flex-col justify-center items-center md:items-start">
+          <div className="border-2 border-[#1F2B6C] rounded-lg mt-6 w-full max-w-md">
+            {/* Post Section */}
+            {Array.from({ length: 5 }).map((_, idx) => (
+              <div key={idx} className="flex flex-col mx-4 mt-4 md:flex-row">
+                <img
+                  className="h-48 w-full border-[#1F2B6C] border-2 rounded-t-lg object-cover md:h-20 md:w-20 md:rounded-xl"
+                  src={nuel}
+                  alt=""
+                />
+                <div className="flex flex-col justify-start p-2 pt-0">
+                  <h5 className="text-sm font-bold text-[#159EEC]">
+                    Monday 05, September 2021 | By Author
+                  </h5>
+                  <p className="mb-4 text-sm text-black pt-2 line-clamp-2">
+                    This is a wider card with supporting text below as a
+                    natural.
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-col md:flex-row items-center md:mx-12 justify-center md:gap-12 gap-2 mt-20 mb-8">
+        {/* Left Section: Image and Write-up */}
+        <div className="flex flex-col items-center md:w-full w-full">
+          {/* Image Section */}
+          <div className="w-full flex justify-center">
+            <img
+              src={dental}
               alt="Doctor"
               className="w-full h-auto object-cover max-w-md"
             />

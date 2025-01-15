@@ -6,8 +6,10 @@ import Calendar from "../assets/Calendar.svg";
 import Team from "../assets/Team.svg";
 import Cash from "../assets/Cash.svg";
 import doctors from "../assets/doctors.jpg";
+import mri from "../assets/mri.jpg";
 import { useNavigate } from "react-router-dom";
 import Carousel from "../components/docCarousel";
+import { motion } from "framer-motion";
 
 // footer
 import FooterCom from "../components/Footer";
@@ -32,7 +34,16 @@ function Home() {
     <>
       {/* Banner Section */}
       <div className="relative w-full h-[80vh] md:h-[60vh] lg:h-[70vh] bg-cover bg-center">
-        <img
+        <motion.img
+          initial={{ x: 100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{
+            delay: 0.2,
+            x: { type: "spring", stiffness: 60 },
+            opacity: { duration: 1 },
+            ease: "eaaseIn",
+            duration: 1,
+          }}
           src={banner}
           alt="banner"
           className="w-full h-full md:h-max object-cover"
@@ -41,9 +52,19 @@ function Home() {
           <h2 className="text-[#558aad] mt-24 text-lg md:text-2xl lg:text-3xl font-sans font-medium">
             Caring for life
           </h2>
-          <span className="text-[#1F2B6C] text-xl font-extrabold font-serif md:text-4xl lg:text-5xl mt-2">
+          <motion.span
+          initial={{ x: -100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{
+            delay: 0.2,
+            x: { type: "spring", stiffness: 60 },
+            opacity: { duration: 1 },
+            ease: "eaaseIn",
+            duration: 1,
+          }}
+           className="text-[#1F2B6C] text-xl font-extrabold font-serif md:text-4xl lg:text-5xl mt-2">
             Leading the Way in Medical
-          </span>
+          </motion.span>
           <span className="text-[#1F2B6C] text-xl font-extrabold font-serif md:text-4xl lg:text-5xl mt-2">
             Excellence
           </span>
@@ -100,9 +121,16 @@ function Home() {
             Welcome to MedCare
           </h2>
           <p className="mt-4 text-sm md:text-base font-medium">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-            laudantium ad perferendis Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Eveniet laudantium ad perferendis!
+            Welcome to MedCare Welcome to MedCare, your trusted partner in
+            healthcare. We are dedicated to offering a wide range of medical
+            services designed to meet your needs. Whether you're seeking expert
+            advice, advanced treatments, or preventive care, our team of
+            professionals is here to provide the best possible care. At MedCare,
+            we focus on delivering personalized healthcare that is accessible,
+            efficient, and compassionate. Our commitment to quality ensures that
+            you receive the care you deserve. Explore our services, learn more
+            about our team, and take the first step toward better health with
+            MedCare today!
           </p>
           <button
             className="flex mt-4 px-4 p-2 justify-center m-auto bg-[#1F2B6C] text-sm md:text-base text-white rounded-lg hover:bg-[#8ab9d8]"
@@ -228,31 +256,49 @@ function Home() {
       </div>
 
       <div className="grid gap-6 grid-cols-1 md:grid-cols-2 mx-6 md:mx-16 lg:mx-24 mt-10 md:mt-10 mb-8">
-        <div className="mt-4 md:mt-0">
+        <div className="mt-4 md:mt-0 order-2 md:order-1">
           <h2 className="text-[#1F2B6C] font-semibold text-xl md:text-2xl lg:text-3xl">
-            Welcome to MedCare
+            MedCare's MRI Services
           </h2>
-          <p className="mt-4 text-sm md:text-base font-medium">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-            laudantium ad perferendis Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Eveniet laudantium ad perferendis! Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Eveniet laudantium ad
-            perferendis Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Eveniet laudantium ad perferendis! Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Eveniet laudantium ad perferendis
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-            laudantium ad perferendis! Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Eveniet laudantium ad perferendis Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Eveniet laudantium ad
-            perferendis! laudantium ad perferendis Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Eveniet laudantium ad perferendis!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-            laudantium ad perferendis Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Eveniet laudantium ad perferendis! laudantium ad
+          <p className="mt-4 text-lg text-justify md:text-lg font-base order-1 md:order-2">
+            At MedCare, we understand the importance of timely and accurate
+            diagnostic imaging in healthcare. Our MRI services are designed to
+            provide high-resolution images that assist in the diagnosis and
+            treatment of a wide range of medical conditions.
           </p>
+          <h2 className="text-[#1F2B6C] mt-4 text-xl md:text-bold font-semibold lg:text-2xl">
+            Why Choose MedCare's MRI Services?
+          </h2>
+          <ul className="list-disc pl-5 space-y-2 pt-4">
+            <li className="text-lg text-black">
+              State-of-the-art Equipment: We use the latest MRI technology to
+              ensure precision and clarity in every scan.
+            </li>
+            <li className="text-lg text-black">
+              Experienced Radiologists: Our team of skilled radiologists
+              carefully interprets each MRI scan to provide accurate results.
+            </li>
+            <li className="text-lg text-black">
+              Comfort and Care: We prioritize your comfort throughout the
+              scanning process, ensuring a stress-free experience.
+            </li>
+            <li className="text-lg text-black">
+              Quick Turnaround Time: We strive to provide fast and reliable
+              results, helping your healthcare provider make informed decisions
+              quickly.
+            </li>
+            <li className="text-lg text-black">
+              Experienced Radiologists: Our team of skilled radiologists
+              carefully interprets each MRI scan to provide accurate results.
+            </li>
+            <li className="text-lg text-black">
+              Experienced Radiologists: Our team of skilled radiologists
+              carefully interprets each MRI scan to provide accurate results.
+            </li>
+          </ul>
         </div>
-        <div className="w-full">
-          <img src={doctors} className="w-full rounded-2xl" alt="Doctors" />
+        <div className="w-full order-1 md:order-2">
+          <img src={mri} className="w-full rounded-2xl" alt="mri" />
         </div>
       </div>
 

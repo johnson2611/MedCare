@@ -31,7 +31,7 @@ export default function Carousel() {
   };
 
   return (
-    <div>
+    <div className="bg-[#1F2B6C] pb-10 my-8">
       <h3 className="text-center font-bold text-[#1F2B6C] text-2xl pt-2">
         Testimonials
       </h3>
@@ -42,10 +42,10 @@ export default function Carousel() {
               src={card.img}
               alt="mot"
               style={{ width: "40px", height: "40px" }}
-              className="testimonial-img rounded-full border-[#1F2B6C] border-2"
+              className="testimonial-img rounded-full border-[#fff] border-2"
             />
-            <h3 className="mt-2 font-bold text-sm">{card.title}</h3>
-            <p className="mt-2 italic font-medium text-sm">
+            <h3 className="mt-2 font-bold text-sm text-white">{card.title}</h3>
+            <p className="mt-2 italic font-medium text-sm text-white text-justify">
               {card.description}
             </p>
           </div>

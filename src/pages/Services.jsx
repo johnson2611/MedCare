@@ -3,7 +3,7 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
 import React from "react";
-import banner from "../assets/banner.png";
+import doc4 from "../assets/doc4.jpg";
 import FooterCom from "../components/Footer";
 
 function Services() {
@@ -11,9 +11,9 @@ function Services() {
     <div>
       <div className="relative w-full h-[80vh] md:h-[60vh] lg:h-[70vh] bg-cover bg-center">
         <img
-          src={banner}
+          src={doc4}
           alt="banner"
-          className="w-full h-full md:h-max object-cover"
+          className="w-full h-full md:h-90 object-cover"
         />
         <div className="absolute top-0 left-0 w-full h-full  flex flex-col justify-center items-start pl-6 md:pl-16 lg:pl-24 text-left">
           <h2 className="text-[#558aad] mt-24 text-lg md:text-2xl lg:text-3xl font-sans font-medium">

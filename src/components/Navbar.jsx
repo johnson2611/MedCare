@@ -1,27 +1,49 @@
 /* eslint-disable no-unused-vars */
 import { Button } from "flowbite-react";
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const toggleMenu = () => setIsOpen(!isOpen);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  // Get the current location to handle active state correctly
+  const location = useLocation();
 
-  const [active, setActive] = useState("home");
+  // Active state with localStorage
+  const [active, setActive] = useState(() => {
+    return localStorage.getItem("activePage") || "home";
+  });
 
   const handleClick = (navlink) => {
     setActive(navlink);
+    localStorage.setItem("activePage", navlink);
   };
+
+  useEffect(() => { 
+    // Update active state based on current URL on page load
+    const path = location.pathname.slice(1); 
+    const currentPath = path || "home"; // Default to "home" for root
+    setActive(currentPath);
+    localStorage.setItem("activePage", currentPath);
+  }, [location]);
 
   return (
     <nav className="bg-[#1F2B6C] fixed top-0 left-0 w-full z-50">
       <div className="flex items-center justify-between p-5 md:p-2  md:flex-row relative">
         {/* Logo or Brand */}
         <div className="text-white text-xl md:order-1 md:absolute md:mx-12 md:bottom-[-2rem]">
-          <a href="/">MedCare</a>
+          {/* <a href="/">MedCare</a> */}
+          <div className="mt-5">
+            <Link
+              to="/"
+              className="self-center whitespace-nowrap text-lg sm:text-xl font-semibold dark:text-white"
+            >
+              <span className="px-2 py-1 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-900 rounded-lg text-white">
+                MedCare
+              </span>
+            </Link>
+          </div>
         </div>
 
         {/* Hamburger Icon (visible on mobile screens) */}
@@ -58,7 +80,7 @@ function Navbar() {
               to="/"
               className={`${
                 active === "home" ? "text-[#159EEC]" : "text-white"
-              } hover:text-[#159EEC] font-semibold`}
+              } hover:text-[#159EEC] font-semibold`} 
               onClick={() => handleClick("home")}
             >
               Home
